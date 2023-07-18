@@ -1,0 +1,117 @@
+.flip-card-container {
+    display: flex;
+    justify-content: center;
+    gap: 70px;
+    margin: 50px;
+  }
+  
+  .flip-card {
+    width: 500px; /* Adjust the width as per your preference */
+    height: 350px;
+    perspective: 1000px;
+  }
+  
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+  }
+  
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-card-front,
+  .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+  
+  .flip-card-front {
+    background-color: rgba(255, 255, 255, 0.7); /* Adjust the transparency value as desired */
+    backdrop-filter: blur(8px); /* Apply a blur effect to the background */
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+  }
+  
+  .flip-card-front h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #fff; /* Set the text color to white */
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Add a shadow to the text for visibility */
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+  }
+  
+  .flip-card-back {
+    background-color: white; /* Change the background color to white */
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    font-size: 13px; /* Increase the font size */
+    line-height: 17px; /* Increase the line height */
+    text-align: center;
+    color: blue; /* Add the font color as blue */
+    font-weight: bold; /* Make the font bold */
+    font-family: "Arial Rounded MT Bold", sans-serif; /* Add bubbly font family */
+    overflow: auto; /* Add scrolling feature */
+    scrollbar-width: thin; /* Set the width of the scrollbar */
+    scrollbar-color: #4CAF50 rgba(0, 0, 0, 0.2); /* Customize the color of the scrollbar */
+  }
+  
+  .flip-card-back::-webkit-scrollbar {
+    width: 8px; /* Set the width of the scrollbar */
+  }
+  
+  .flip-card-back::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.2); /* Set the background color of the scrollbar track */
+  }
+  
+  .flip-card-back::-webkit-scrollbar-thumb {
+    background-color: #1f7acf; /* Set the color of the scrollbar thumb */
+    border-radius: 10px; /* Add border radius to the scrollbar thumb */
+  }
+  
+  .flip-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+  }
+  
+  .flip-card p {
+    margin-bottom: 10px;
+  }
+  
+  .flip-card ul {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 20px;
+  }
+  
+  .flip-card li {
+    margin-bottom: 5px;
+  }
+  
+  .flip-card a {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 4px;
+  }
